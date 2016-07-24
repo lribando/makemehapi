@@ -22,12 +22,8 @@ server.register(Vision, function (err) {
   server.route({
     method: 'GET',
     path: '/',
-    handler: function (request, reply) {
-      var data = {
-        name: request.query.name,
-        suffix: request.query.suffix
-      }
-      reply.view('index', data)
+    handler: {
+      view: 'index.html'
     }
   });
 });
