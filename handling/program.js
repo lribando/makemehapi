@@ -13,10 +13,10 @@ server.register(Inert, function (err) {
     throw err;
   }
   server.route({
-    path: '/index',
+    path: '/',
     method: 'GET',
     handler: {
-      file: Path.join(__dirname, 'html/index.html')
+      file: Path.join(__dirname, '/html/index.html')
     }
   });
 });
